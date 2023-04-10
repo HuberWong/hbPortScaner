@@ -5,12 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "local scan",
+            "name": "scan local",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${fileDirname}",
-            "args": ["-i", "127.0.2.1", "1", "500"]
-        }
+            // "program": "${fileDirname}",
+            "program": "tcp_scan.go",
+            "args": ["-i", "127.0.0.1", "21", "500"]
+        },
+        {
+            "name": "scan baidu",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            // "program": "${fileDirname}",
+            "program": "tcp_scan.go",
+            "args": ["-i", "baidu.com", "1", "500"]
+        },
+        {
+            "name": "noargs",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            // "program": "${fileDirname}",
+            "program": "tcp_scan.go",
+        },
     ]
 }
